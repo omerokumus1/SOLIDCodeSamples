@@ -1,7 +1,13 @@
 package user_example;
 
-public class UserExample {
-    public static void runBadUserExample() {
+
+public class Main {
+    public static void main(String[] args) {
+        runBadUserExample();
+        runGoodUserExample();
+    }
+
+    private static void runBadUserExample() {
         System.out.println("--- Bad SRP Example ---");
         UserBadExample badUser = new UserBadExample("u123", "Alice Smith", "alice@example.com");
 
@@ -24,7 +30,7 @@ public class UserExample {
         // Notice how BadUser changes for multiple unrelated reasons.
     }
 
-    public static void runGoodUserExample() {
+    private static void runGoodUserExample() {
         System.out.println("\n--- Good SRP Example ---");
 
         UserRepository userRepository = new InMemoryUserRepository();
@@ -58,4 +64,5 @@ public class UserExample {
             System.out.println("An unexpected error occurred: " + e.getMessage());
         }
     }
+
 }
