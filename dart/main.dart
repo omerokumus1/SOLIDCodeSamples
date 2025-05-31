@@ -1,9 +1,13 @@
+import 'kitchen_manager/kitchen_manager.dart';
 import 'user_example/user_bad_example.dart';
 import 'user_example/user_good_example.dart';
 
 void main() {
-  runBadUserExample();
-  runGoodUserExample();
+  // runBadUserExample();
+  // runGoodUserExample();
+
+  var kitchenManager = KitchenManager();
+  kitchenManager.run();
 }
 
 void runBadUserExample() {
