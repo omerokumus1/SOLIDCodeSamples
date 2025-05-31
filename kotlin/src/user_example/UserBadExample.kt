@@ -70,26 +70,3 @@ class BadUser(val id: String, var name: String, var email: String, var isActive:
     }
 
 }
-
-fun main() {
-    println("--- Bad SRP Example ---")
-    val badUser = BadUser("u123", "Alice Smith", "alice@example.com")
-
-    if (badUser.isValid()) {
-        badUser.saveToDatabase()
-    } else {
-        println("User is invalid, cannot save.")
-    }
-
-    println("\nDisplaying user info:\n${badUser.formatForDisplay()}")
-
-    // Imagine a change: Now emails must end with ".org"
-    // -> You change isValid() in BadUser
-
-    // Imagine another change: Store users in a file instead of a DB
-    // -> You change saveToDatabase() in BadUser
-
-    // Imagine another change: Display user as a JSON string for a new API
-    // -> You change formatForDisplay() in BadUser
-    // Notice how BadUser changes for multiple unrelated reasons.
-}

@@ -163,39 +163,3 @@ class UserService(
         return userRepository.save(user) // Save the updated status
     }
 }
-
-
-fun main() {
-    println("\n--- Good SRP Example ---")
-
-    val userRepository = InMemoryUserRepository()
-    val userValidator = UserValidatorImpl()
-    val userPresenter = UserPresenterImpl()
-
-    val userService = UserService(userRepository, userValidator, userPresenter)
-
-    try {
-        val alice = userService.createUser("u123", "Alice Wonderland", "alice@example.com")
-        println("Created: ${alice.name}")
-
-        val bob = userService.createUser("u124", "Bob The Builder", "bob@example.net")
-        println("Created: ${bob.name}")
-
-        println("\nFormatted for console:\n${userService.getFormattedUserDetails("u123")}")
-        println("\nFormatted for JSON:\n${userService.getFormattedUserDetails("u124", "json")}")
-
-        // Demonstrating a validation failure
-        try {
-            userService.createUser("u125", "", "invalid")
-        } catch (e: IllegalArgumentException) {
-            println("\nError creating user: ${e.message}")
-        }
-
-        // Demonstrating an update and re-saving
-        val updatedBob = userService.activateUser("u124")
-        println("\nUpdated Bob: ${updatedBob.name} (Active: ${updatedBob.isActive})")
-
-    } catch (e: Exception) {
-        println("An unexpected error occurred: ${e.message}")
-    }
-}
