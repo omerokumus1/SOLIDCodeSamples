@@ -1,4 +1,4 @@
-import { BadUser } from './user_example/user_bad_example';
+import { BadUser } from './user_bad_example';
 import {
   UserRepository,
   InMemoryUserRepository,
@@ -7,7 +7,7 @@ import {
   UserPresenter,
   UserPresenterImpl,
   UserService,
-} from './user_example/user_good_example';
+} from './user_good_example';
 
 function runBadUserExample(): void {
   console.log('--- Bad User Example ---');
