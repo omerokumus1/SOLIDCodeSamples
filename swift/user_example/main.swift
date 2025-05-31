@@ -1,8 +1,8 @@
 import Foundation
 
 /*
-Run this in the terminal. Current directory should be the root of the project:
-swiftc swift/main.swift swift/UserExample/UserBadExample.swift swift/UserExample/UserGoodExample.swift  -o main && ./main
+Run this in the terminal. Current directory should be swift directory:
+swiftc user_example/main.swift user_example/UserBadExample.swift user_example/UserGoodExample.swift  -o main && ./main
 */
 
 func runBadUserExample() {
