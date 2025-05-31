@@ -1,5 +1,5 @@
-from user_example.user_bad_example import BadUser
-from user_example.user_good_example import UserService, InMemoryUserRepository, UserValidatorImpl, UserPresenterImpl
+from user_bad_example import BadUser
+from user_good_example import UserService, InMemoryUserRepository, UserValidatorImpl, UserPresenterImpl
 
 def run_bad_user_example():
     print("--- Bad SRP Example ---")
