@@ -124,6 +124,10 @@ void runBadUserExample() {
     // Notice how BadUser changes for multiple unrelated reasons.
 }
 
+/*
+g++ user_bad_example.cpp -o user_bad_example
+./user_bad_example
+*/
 int main() {
     runBadUserExample();
     return 0;

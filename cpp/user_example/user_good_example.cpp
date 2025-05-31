@@ -240,6 +240,10 @@ void runGoodUserExample() {
     }
 }
 
+/*
+g++ user_good_example.cpp -o user_good_example
+./user_good_example
+*/
 int main() {
     runGoodUserExample();
     return 0;

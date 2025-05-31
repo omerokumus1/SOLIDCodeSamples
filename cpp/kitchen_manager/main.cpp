@@ -1,6 +1,9 @@
 #include "KitchenManager.h"
 
-// g++ main.cpp KitchenManager.cpp Chef.cpp Dishwasher.cpp Waiter.cpp -o main
+/*
+g++ main.cpp KitchenManager.cpp Chef.cpp Dishwasher.cpp Waiter.cpp -o main
+./main
+*/
 int main() {
     KitchenManager kitchenManager;
     kitchenManager.run();
