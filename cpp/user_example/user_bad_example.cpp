@@ -101,7 +101,7 @@ public:
     void setIsActive(bool status) { isActive = status; }
 };
 
-void runBadSrpExample() {
+void runBadUserExample() {
     std::cout << "--- Bad SRP Example ---\n";
     BadUser badUser("u123", "Alice Smith", "alice@example.com");
 
@@ -125,6 +125,6 @@ void runBadSrpExample() {
 }
 
 int main() {
-    runBadSrpExample();
+    runBadUserExample();
     return 0;
 }

@@ -203,7 +203,7 @@ public:
     }
 };
 
-void runGoodSrpExample() {
+void runGoodUserExample() {
     std::cout << "\n--- Good SRP Example ---\n";
 
     // Instantiate the concrete implementations (dependencies)
@@ -241,6 +241,6 @@ void runGoodSrpExample() {
 }
 
 int main() {
-    runGoodSrpExample();
+    runGoodUserExample();
     return 0;
 }
