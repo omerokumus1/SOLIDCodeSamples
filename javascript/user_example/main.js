@@ -2,14 +2,14 @@
 // Note: In a browser environment, you would use import statements or script tags
 // In Node.js, you would use require() or import statements
 
-const { BadUser } = require('./user_example/user_bad_example.js');
+const { BadUser } = require('./user_bad_example.js');
 const {
   GoodUser,
   InMemoryUserRepository,
   UserValidator,
   UserPresenter,
   UserService,
-} = require('./user_example/user_good_example.js');
+} = require('./user_good_example.js');
 
 function runBadUserExample() {
   console.log('--- Bad SRP Example ---');
@@ -90,10 +90,5 @@ function runGoodUserExample() {
   }
 }
 
-// Run both examples
-function main() {
-  runBadUserExample();
-  runGoodUserExample();
-}
-
-main();
+runBadUserExample();
+runGoodUserExample();
